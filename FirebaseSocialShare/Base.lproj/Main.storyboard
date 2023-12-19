@@ -1,24 +1,234 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FirebaseSocialShare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O46-KS-gDT">
+                                <rect key="frame" x="40" y="703" width="90" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign In">
+                                    <fontDescription key="titleFontDescription" name="Georgia" family="Georgia" pointSize="15"/>
+                                    <color key="baseForegroundColor" red="0.3523571929" green="0.58431372550000005" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="signInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5kF-aR-8zN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wov-kF-GSJ">
+                                <rect key="frame" x="263" y="703" width="90" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign Up">
+                                    <fontDescription key="titleFontDescription" name="Georgia" family="Georgia" pointSize="15"/>
+                                    <color key="baseForegroundColor" red="0.3529411764705882" green="0.58431372550000005" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="signUpClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rp1-5o-L4k"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ph5-Fg-QlJ">
+                                <rect key="frame" x="16" y="499" width="361" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94797028129897987" green="0.96803514072172259" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mona-lisa" translatesAutoresizingMaskIntoConstraints="NO" id="tNK-0W-EGc">
+                                <rect key="frame" x="16" y="98" width="361" height="345"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yJY-Sj-2ss">
+                                <rect key="frame" x="16" y="590" width="361" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94797028129897987" green="0.96803514072172259" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.12653969948339569" green="0.15954029511467174" blue="0.17347301136363635" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="mgg-4y-d2m"/>
+                    <connections>
+                        <outlet property="emailText" destination="ph5-Fg-QlJ" id="pN3-uM-LCJ"/>
+                        <outlet property="passwordText" destination="yJY-Sj-2ss" id="vIa-ba-fCO"/>
+                        <segue destination="zuu-8z-9vb" kind="presentation" identifier="toFeedVC" modalPresentationStyle="fullScreen" id="XEW-ae-yji"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="G9g-5l-6hF">
+            <objects>
+                <viewController id="RDz-Hg-BJe" customClass="SettingsViewController" customModule="FirebaseSocialShare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dT5-k0-ICv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lr8-kc-eRg">
+                                <rect key="frame" x="135" y="359" width="123" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.24325284090909094" green="0.20074679218096508" blue="0.079670068959515325" alpha="0.33071192052980131" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log Out" cornerStyle="dynamic">
+                                    <fontDescription key="titleFontDescription" name="Georgia" family="Georgia" pointSize="30"/>
+                                    <color key="baseForegroundColor" red="0.35294117650000001" green="0.58431372550000005" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logoutClicked:" destination="RDz-Hg-BJe" eventType="touchUpInside" id="INs-Gi-6xj"/>
+                                    <action selector="signUpClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4jB-b0-lTu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YFM-CB-hWu"/>
+                        <color key="backgroundColor" red="0.12653969949999999" green="0.15954029510000001" blue="0.17347301139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear.circle.fill" catalog="system" id="aml-8s-B4M"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toViewController" modalPresentationStyle="fullScreen" id="znc-Wi-dsR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Xg-9u-otX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1262" y="840"/>
+        </scene>
+        <!--Upload-->
+        <scene sceneID="ofR-uB-jEe">
+            <objects>
+                <viewController id="fEZ-GR-3jt" customClass="UploadViewController" customModule="FirebaseSocialShare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n41-ck-KaK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kanagawa-wave-and-fuji-mountain-table-inside" translatesAutoresizingMaskIntoConstraints="NO" id="7dd-xH-CKt">
+                                <rect key="frame" x="16" y="121" width="361" height="326"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ibY-1l-v7b">
+                                <rect key="frame" x="16" y="502" width="360" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="rRS-qp-uQS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQm-wB-oTd">
+                                <rect key="frame" x="106" y="611" width="180" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Zx1-Ny-hDI"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Upload">
+                                    <imageReference key="image" image="arrow.up.circle.fill" catalog="system" renderingMode="hierarchical">
+                                        <hierarchicalColors>
+                                            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color systemColor="secondaryLabelColor"/>
+                                            <color systemColor="tertiaryLabelColor"/>
+                                        </hierarchicalColors>
+                                    </imageReference>
+                                    <backgroundConfiguration key="background"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionButtonClicked:" destination="fEZ-GR-3jt" eventType="touchUpInside" id="Qtx-Qy-zFJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sSt-AR-kJE"/>
+                        <color key="backgroundColor" red="0.094254154317466504" green="0.16924511437597467" blue="0.21738873106060608" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="7dd-xH-CKt" firstAttribute="top" secondItem="sSt-AR-kJE" secondAttribute="top" constant="121" id="2Wn-kd-Op9"/>
+                            <constraint firstItem="7dd-xH-CKt" firstAttribute="leading" secondItem="n41-ck-KaK" secondAttribute="leadingMargin" id="474-yR-BOw"/>
+                            <constraint firstItem="7dd-xH-CKt" firstAttribute="trailing" secondItem="n41-ck-KaK" secondAttribute="trailingMargin" id="65u-ET-Gth"/>
+                            <constraint firstItem="pQm-wB-oTd" firstAttribute="leading" secondItem="sSt-AR-kJE" secondAttribute="leading" constant="106" id="K6U-MX-LJb"/>
+                            <constraint firstItem="ibY-1l-v7b" firstAttribute="centerX" secondItem="pQm-wB-oTd" secondAttribute="centerX" id="L01-iV-iVc"/>
+                            <constraint firstItem="sSt-AR-kJE" firstAttribute="bottom" secondItem="pQm-wB-oTd" secondAttribute="bottom" constant="92" id="UwI-uI-gkW"/>
+                            <constraint firstItem="7dd-xH-CKt" firstAttribute="centerX" secondItem="ibY-1l-v7b" secondAttribute="centerX" id="ghL-VN-WHo"/>
+                            <constraint firstItem="ibY-1l-v7b" firstAttribute="top" secondItem="7dd-xH-CKt" secondAttribute="bottom" constant="55" id="iQ5-ou-kAo"/>
+                            <constraint firstItem="7dd-xH-CKt" firstAttribute="leading" secondItem="ibY-1l-v7b" secondAttribute="leading" id="orj-58-yUz"/>
+                            <constraint firstItem="pQm-wB-oTd" firstAttribute="top" secondItem="ibY-1l-v7b" secondAttribute="bottom" constant="75" id="qxO-W2-zdy"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Upload" image="u.circle.fill" catalog="system" id="gLb-XV-UK2"/>
+                    <connections>
+                        <outlet property="commentText" destination="ibY-1l-v7b" id="lTu-ug-mvr"/>
+                        <outlet property="imageView" destination="7dd-xH-CKt" id="D0U-9u-lHh"/>
+                        <outlet property="uploadButton" destination="pQm-wB-oTd" id="igt-4H-ay1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TsQ-iL-LO8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2168.7022900763359" y="105.63380281690141"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="GAo-sT-kZd">
+            <objects>
+                <viewController id="iyM-aH-lGl" customClass="FeedViewController" customModule="FirebaseSocialShare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B0v-B9-mrE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="78u-Ki-RZJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Feed" image="f.circle.fill" catalog="system" id="dHQ-hK-Jts"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gNu-AT-Xhp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2169" y="-594"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="d1R-Tg-SpL">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBar" id="zuu-8z-9vb" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fqF-5N-f3C"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ast-Tr-J1I">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="iyM-aH-lGl" kind="relationship" relationship="viewControllers" id="uUu-dx-EOx"/>
+                        <segue destination="fEZ-GR-3jt" kind="relationship" relationship="viewControllers" id="s9y-A2-K7q"/>
+                        <segue destination="RDz-Hg-BJe" kind="relationship" relationship="viewControllers" id="I9m-ht-aqA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ws8-gn-AqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1263" y="-35"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.up.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="f.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="gear.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="kanagawa-wave-and-fuji-mountain-table-inside" width="512" height="507"/>
+        <image name="mona-lisa" width="512" height="512"/>
+        <image name="u.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
